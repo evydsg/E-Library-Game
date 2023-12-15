@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aaliyah Scenes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="Aaliyah_main">
+    </h1>
+    <p class="instructions">
+      <i>
+          <span id="instructionText">
+              Paint the rainbow <br />
+              with violet.
+            </span></i>
+    </p>
+    <p class="Hint">
+      If you don't choose the right color, <br />the rainbow will only have one color<br />
+    </p>
+    <!-- ... (other HTML code) ... -->
+
+    <button class="paintViolet" id="aaliyahViolet" data-instruction="Paint the rainbow with indigo."></button>
+    <button class="paintIndigo" id="aaliyahIndigo"></button>
+    <button class="paintBlue" id="aaliyahBlue"></button>
+    <button class="paintGreen" id="aaliyahGreen"></button>
+    <button class="paintYellow" id="aaliyahYellow"></button>
+    <button class="paintOrange" id="aaliyahOrange"></button>
+    <button class="paintRed" id="aaliyahRed"></button>
+
+    <script>
+      // Function to change the background image
+      function changeBackgroundImage(imageUrl) {
+        document.querySelector(
+          ".Aaliyah_main"
+        ).style.backgroundImage = `url(${imageUrl})`;
+      }
+
+      function updateInstructions(instruction) {
+        document.getElementById("instructionText").textContent = instruction;
+      }
+
+      // Add click event listeners to specific buttons to change the background image
+      const blueButton = document.getElementById("aaliyahBlue");
+      const greenButton = document.getElementById("aaliyahGreen");
+      const yellowButton = document.getElementById("aaliyahYellow");
+      const violetButton = document.getElementById("aaliyahViolet");
+      const redButton = document.getElementById("aaliyahRed");
+      const orangeButton = document.getElementById("aaliyahOrange");
+      const indigoButton = document.getElementById("aaliyahIndigo");
+
+      blueButton.addEventListener("click", function () {
+        changeBackgroundImage("blueRainbow_.png");
+        updateInstructions("Paint the rainbow with green."); // Replace with the URL of your blue background image
+      });
+
+      greenButton.addEventListener("click", function () {
+        changeBackgroundImage("greenRainbow_.png"); // Replace with the URL of your green background image
+        updateInstructions("Paint the rainbow with yellow.");
+      });
+
+      violetButton.addEventListener("click", function () {
+        changeBackgroundImage("violetRainbow.png"); // Replace with the URL of your violet background image
+        updateInstructions("Paint the rainbow with indigo.");
+      });
+
+      yellowButton.addEventListener("click", function () {
+        changeBackgroundImage("yellowRainbow_.png");// Replace with the URL of your violet background image
+        updateInstructions("Paint the rainbow with orange");
+      });
+
+      redButton.addEventListener("click", function () {
+        changeBackgroundImage("redRainbow_.png"); // Replace with the URL of your red background image
+        updateInstructions("You did it! The rainbow has all the colors.");
+      });
+
+      orangeButton.addEventListener("click", function () {
+        changeBackgroundImage("orangeRainbow_.png"); // Replace with the URL of your orange background image
+        updateInstructions("Paint the rainbow with red");
+      });
+
+      indigoButton.addEventListener("click", function () {
+        changeBackgroundImage("indigoRainbow_.png"); // Replace with the URL of your indigo background image
+        updateInstructions("Paint the rainbow with blue");
+      });
+    </script>
+  </body>
+</html>
